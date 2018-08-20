@@ -104,7 +104,7 @@ For example:
 
 {% include copy-clipboard.html %}
 ~~~ sql
-> CREATE INDEX logoff_copy_id_idx ON logoff_copy(user_id);
+> CREATE INDEX logoff_copy_id_idx ON logoff_copy (user_id);
 ~~~
 
 {% include copy-clipboard.html %}

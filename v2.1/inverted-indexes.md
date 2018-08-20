@@ -100,10 +100,18 @@ Then, insert a few rows a data:
 
 {% include copy-clipboard.html %}
 ~~~ sql
-> INSERT INTO users (user_profile) VALUES
-    ('{"first_name": "Lola", "last_name": "Dog", "location": "NYC", "online" : true, "friends" : 547}'),
-    ('{"first_name": "Ernie", "status": "Looking for treats", "location" : "Brooklyn"}'),
-    ('{"first_name": "Carl", "last_name": "Kimball", "location": "NYC", "breed": "Boston Terrier"}'
+> INSERT
+INTO
+  users (user_profile)
+VALUES
+  (
+    '{"first_name": "Lola", "last_name": "Dog", "location": "NYC", "online" : true, "friends" : 547}'
+  ),
+  (
+    '{"first_name": "Ernie", "status": "Looking for treats", "location" : "Brooklyn"}'
+  ),
+  (
+    '{"first_name": "Carl", "last_name": "Kimball", "location": "NYC", "breed": "Boston Terrier"}'
   );
 ~~~
 
@@ -143,7 +151,7 @@ Now, run a query that filters on the `JSONB` column:
 
 {% include copy-clipboard.html %}
 ~~~ sql
-> SELECT * FROM users where user_profile @> '{"location":"NYC"}';
+> SELECT * FROM users WHERE user_profile @> '{"location":"NYC"}';
 ~~~
 ~~~
 +--------------------------------------+----------------------------------+--------------------------------------------------------------------------+

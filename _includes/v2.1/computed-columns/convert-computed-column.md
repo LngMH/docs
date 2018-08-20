@@ -16,10 +16,11 @@ Then, insert a few rows of data:
 
 {% include copy-clipboard.html %}
 ~~~ sql
-> INSERT INTO office_dogs (id, first_name, last_name) VALUES
-    (1, 'Petee', 'Hirata'),
-    (2, 'Carl', 'Kimball'),
-    (3, 'Ernie', 'Narayan');
+> INSERT
+INTO
+  office_dogs (id, first_name, last_name)
+VALUES
+  (1, 'Petee', 'Hirata'), (2, 'Carl', 'Kimball'), (3, 'Ernie', 'Narayan');
 ~~~
 
 {% include copy-clipboard.html %}
@@ -87,7 +88,11 @@ The computed column is now a regular column and can be updated as such:
 
 {% include copy-clipboard.html %}
 ~~~ sql
-> INSERT INTO office_dogs (id, first_name, last_name, full_name) VALUES (4, 'Lola', 'McDog', 'This is not computed');
+> INSERT
+INTO
+  office_dogs (id, first_name, last_name, full_name)
+VALUES
+  (4, 'Lola', 'McDog', 'This is not computed');
 ~~~
 
 {% include copy-clipboard.html %}

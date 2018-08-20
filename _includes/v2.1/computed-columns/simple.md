@@ -14,10 +14,11 @@ Then, insert a few rows of data:
 
 {% include copy-clipboard.html %}
 ~~~ sql
-> INSERT INTO names (id, first_name, last_name) VALUES
-    (1, 'Lola', 'McDog'),
-    (2, 'Carl', 'Kimball'),
-    (3, 'Ernie', 'Narayan');
+> INSERT
+INTO
+  names (id, first_name, last_name)
+VALUES
+  (1, 'Lola', 'McDog'), (2, 'Carl', 'Kimball'), (3, 'Ernie', 'Narayan');
 ~~~
 
 {% include copy-clipboard.html %}

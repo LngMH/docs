@@ -18,12 +18,15 @@ Then, insert a few rows a data:
 
 {% include copy-clipboard.html %}
 ~~~ sql
-> INSERT INTO gymnastics (athlete, vault, bars, beam, floor) VALUES
-    ('Simone Biles', 15.933, 14.800, 15.300, 15.800),
-    ('Gabby Douglas', 0, 15.766, 0, 0),
-    ('Laurie Hernandez', 15.100, 0, 15.233, 14.833),
-    ('Madison Kocian', 0, 15.933, 0, 0),
-    ('Aly Raisman', 15.833, 0, 15.000, 15.366);
+> INSERT
+INTO
+  gymnastics (athlete, vault, bars, beam, floor)
+VALUES
+  ('Simone Biles', 15.933, 14.800, 15.300, 15.800),
+  ('Gabby Douglas', 0, 15.766, 0, 0),
+  ('Laurie Hernandez', 15.100, 0, 15.233, 14.833),
+  ('Madison Kocian', 0, 15.933, 0, 0),
+  ('Aly Raisman', 15.833, 0, 15.000, 15.366);
 ~~~
 
 {% include copy-clipboard.html %}

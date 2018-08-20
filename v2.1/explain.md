@@ -192,7 +192,7 @@ that are known to have the same value on all rows. For example:
 
 {% include copy-clipboard.html %}
 ~~~ sql
-> EXPLAIN (METADATA) SELECT * FROM abcd JOIN efg ON a=e AND c=1;
+> EXPLAIN (METADATA) SELECT * FROM abcd JOIN efg ON (a = e) AND (c = 1);
 ~~~
 
 ~~~
@@ -302,7 +302,12 @@ By default, the `Level` and `Type` columns are hidden. To view, use `SELECT`:
 
 {% include copy-clipboard.html %}
 ~~~ sql
-> SELECT "Level", "Type" FROM [EXPLAIN (VERBOSE) SELECT * FROM kv AS a JOIN kv USING (k) WHERE a.v > 3 ORDER BY a.v DESC];
+> SELECT
+  "Level", "Type"
+FROM
+  [
+    EXPLAIN (VERBOSE) SELECT * FROM kv AS a JOIN kv USING (k) WHERE a.v > 3 ORDER BY a.v DESC
+  ];
 ~~~
 ~~~
 +-------+--------+
